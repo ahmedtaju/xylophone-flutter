@@ -225,5 +225,3 @@ class _PlayerWidgetState extends State<PlayerWidget> {
     });
   }
 }
-
-//#endregion
