@@ -53,9 +53,6 @@ class _SimpleExampleAppState extends State<_SimpleExampleApp> {
   }
 }
 
-// The PlayerWidget is a copy of "/lib/components/player_widget.dart".
-//#region PlayerWidget
-
 class PlayerWidget extends StatefulWidget {
   final AudioPlayer player;
 
