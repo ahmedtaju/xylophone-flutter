@@ -8,6 +8,11 @@ void main() {
 class XylophoneApp extends StatelessWidget {
   const XylophoneApp({super.key});
 
+  void playSound(int n) {
+    final player = AudioPlayer();
+    player.play(AssetSource('note$n.wav'));
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -20,8 +25,7 @@ class XylophoneApp extends StatelessWidget {
           Container(
             child: GestureDetector(
               onTap: () {
-                final player = AudioPlayer();
-                player.play(AssetSource('note1.wav'));
+                playSound(1);
               },
             ),
             width: 100,
@@ -34,8 +38,7 @@ class XylophoneApp extends StatelessWidget {
           Container(
             child: GestureDetector(
               onTap: () {
-                final player = AudioPlayer();
-                player.play(AssetSource('note2.wav'));
+                playSound(2);
               },
             ),
             width: 100,
@@ -48,8 +51,7 @@ class XylophoneApp extends StatelessWidget {
           Container(
             child: GestureDetector(
               onTap: () {
-                final player = AudioPlayer();
-                player.play(AssetSource('note3.wav'));
+                playSound(3);
               },
             ),
             width: 100,
@@ -62,8 +64,7 @@ class XylophoneApp extends StatelessWidget {
           Container(
             child: GestureDetector(
               onTap: () {
-                final player = AudioPlayer();
-                player.play(AssetSource('note4.wav'));
+                playSound(4);
               },
             ),
             width: 100,
@@ -76,8 +77,7 @@ class XylophoneApp extends StatelessWidget {
           Container(
             child: GestureDetector(
               onTap: () {
-                final player = AudioPlayer();
-                player.play(AssetSource('note5.wav'));
+                playSound(5);
               },
             ),
             width: 100,
@@ -90,8 +90,7 @@ class XylophoneApp extends StatelessWidget {
           Container(
             child: GestureDetector(
               onTap: () {
-                final player = AudioPlayer();
-                player.play(AssetSource('note6.wav'));
+                playSound(6);
               },
             ),
             width: 100,
@@ -104,8 +103,7 @@ class XylophoneApp extends StatelessWidget {
           Container(
             child: GestureDetector(
               onTap: () {
-                final player = AudioPlayer();
-                player.play(AssetSource('note7.wav'));
+                playSound(7);
               },
             ),
             width: 100,
