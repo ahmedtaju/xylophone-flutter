@@ -2,7 +2,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(XylophoneApp());
+  return runApp(XylophoneApp());
 }
 
 class XylophoneApp extends StatelessWidget {
@@ -13,13 +13,13 @@ class XylophoneApp extends StatelessWidget {
     player.play(AssetSource('note$soundNumber.wav'));
   }
 
-  Expanded buildKey(int n, Color color) {
+  Expanded buildKey({int? n, Color? color}) {
     return Expanded(
       child: Container(
         color: color,
         child: GestureDetector(
           onTap: () {
-            playSound(n);
+            playSound(n!);
           },
         ),
       ),
@@ -33,13 +33,13 @@ class XylophoneApp extends StatelessWidget {
         child: Scaffold(
             body: Column(
           children: [
-            buildKey(1, Colors.red),
-            buildKey(2, Colors.yellow),
-            buildKey(3, Colors.green),
-            buildKey(4, Colors.blue),
-            buildKey(5, Colors.teal),
-            buildKey(6, Colors.purple),
-            buildKey(7, Colors.pink),
+            buildKey(n: 1, color: Colors.red),
+            buildKey(n: 2, color: Colors.yellow),
+            buildKey(n: 3, color: Colors.green),
+            buildKey(n: 4, color: Colors.blue),
+            buildKey(n: 5, color: Colors.teal),
+            buildKey(n: 6, color: Colors.purple),
+            buildKey(n: 7, color: Colors.pink),
           ],
         )),
       ),
